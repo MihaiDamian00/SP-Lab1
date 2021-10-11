@@ -1,8 +1,16 @@
 Author.java
  Author
-Book.java
- Book
-Chapter.java
- Chapter
+Image.java
+ Image
+Table.java
+ Table
+Paragraph.java
+ Paragraph
 Main.java
  Main
+SubChapter.java
+ SubChapter
+Chapter.java
+ Chapter
+Book.java
+ Book
