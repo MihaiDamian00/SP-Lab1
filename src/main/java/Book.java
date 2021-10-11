@@ -32,5 +32,9 @@ public class Book {
         for (Author aut : AuthorList) {
             aut.print();
         }
+        System.out.println("Chapters: ");
+        for (Chapter chp : ChapterList) {
+            chp.print();
+        }
     }
 }
