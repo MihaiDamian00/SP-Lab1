@@ -5,21 +5,6 @@ public class Paragraph implements Element {
         this.text = text;
     }
 
-    @Override
-    public void createNewParagraph(String para) {
-
-    }
-
-    @Override
-    public void createNewImage(String img) {
-
-    }
-
-    @Override
-    public void createNewTable(String table) {
-
-    }
-
     public void print() {
         System.out.println("Paragraph: " + this.text);
     }
