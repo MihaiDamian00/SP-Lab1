@@ -1,10 +1,11 @@
 import java.util.LinkedList;
 import java.util.List;
 
-public interface Element {
-    void print();
+public abstract class Element {
+    Element parent;
+    abstract void print();
 
-    void add(Element el);
-    void remove(Element el);
-    Element get(int num);
+    abstract void add(Element el);
+    abstract void remove(Element el);
+    abstract Element get(int num);
 }

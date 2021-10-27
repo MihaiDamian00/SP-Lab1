@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.List;
 
-public class SubChapter implements Element {
+public class SubChapter extends Element {
     String name;
 
     public SubChapter(String name) {

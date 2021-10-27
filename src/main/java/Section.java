@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.List;
 
-public class Section implements Element {
+public class Section extends Element {
     String title;
     List<Element> elementList = new LinkedList<>();
 
@@ -11,7 +11,10 @@ public class Section implements Element {
 
     @Override
     public void add(Element el) {
-        this.elementList.add(el);
+        if (el.parent == null) {
+            this.elementList.add(el);
+            el.parent = this;
+        }
     }
 
     @Override

@@ -1,4 +1,4 @@
-public class TableOfContents implements Element{
+public class TableOfContents extends Element{
     String title;
 
     public TableOfContents(String title) {
