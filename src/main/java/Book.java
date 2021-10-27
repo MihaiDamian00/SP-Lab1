@@ -1,40 +1,37 @@
 import java.util.LinkedList;
 import java.util.List;
 
-public class Book {
+public class Book extends Section{
     String title;
-    List<Author> AuthorList = new LinkedList<>();
-    List<Chapter> ChapterList = new LinkedList<>();
+    List<Author> authorList = new LinkedList<>();
+    List<Element> elementList = new LinkedList<>();
 
     public Book(String title) {
+        super(title);
         this.title = title;
-//        this.AuthorList = new LinkedList<Author>();
+    }
+
+    public void addContent(Element el) {
+        this.elementList.add(el);
     }
 
     public void addAuthor(Author author) {
-        this.AuthorList.add(author);
+        this.authorList.add(author);
     }
 
-    public int createChapter(String chapterName) {
-        Chapter chap = new Chapter(chapterName);
-        this.ChapterList.add(chap);
-
-        return this.ChapterList.indexOf(chap);
-    }
-
-    public Chapter getChapter(int index) {
-        return this.ChapterList.get(index);
-    }
-
+    @Override
     public void print() {
-        System.out.println("Title: " + this.title);
-        System.out.println("Author(s): ");
-        for (Author aut : AuthorList) {
+        System.out.println("Book: " + this.title + "\n");
+
+        System.out.println("Authors:");
+        for (Author aut : authorList) {
             aut.print();
         }
-        System.out.println("Chapters: ");
-        for (Chapter chp : ChapterList) {
-            chp.print();
+
+        System.out.println();
+
+        for (Element el : elementList) {
+            el.print();
         }
     }
 }

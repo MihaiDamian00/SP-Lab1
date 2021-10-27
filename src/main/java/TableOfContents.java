@@ -1,13 +1,13 @@
-public class Table implements Element {
+public class TableOfContents implements Element{
     String title;
 
-    public Table(String title) {
+    public TableOfContents(String title) {
         this.title = title;
     }
 
     @Override
     public void print() {
-        System.out.println("Table with Title: " + this.title);
+        System.out.println("TableOfContents with title: " + this.title);
     }
 
     @Override
