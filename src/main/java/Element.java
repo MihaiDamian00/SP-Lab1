@@ -1,12 +1,11 @@
 import java.util.LinkedList;
 import java.util.List;
 
-public interface Element {
-    void createNewParagraph(String para);
+public abstract class Element {
+    Element parent;
+    abstract void print();
 
-    void createNewImage(String img);
-
-    void createNewTable(String table);
-
-    void print();
+    abstract void add(Element el);
+    abstract void remove(Element el);
+    abstract Element get(int num);
 }

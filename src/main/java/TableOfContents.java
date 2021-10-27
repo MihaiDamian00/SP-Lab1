@@ -1,23 +1,23 @@
-import java.util.LinkedList;
-import java.util.List;
+public class TableOfContents extends Element{
+    String title;
 
-public class Paragraph extends Element {
-    String text;
-
-    public Paragraph(String text) {
-        this.text = text;
+    public TableOfContents(String title) {
+        this.title = title;
     }
 
+    @Override
     public void print() {
-        System.out.println("Paragraph: " + this.text);
+        System.out.println("TableOfContents with title: " + this.title);
     }
 
     @Override
     public void add(Element el) {
+
     }
 
     @Override
     public void remove(Element el) {
+
     }
 
     @Override

@@ -1,4 +1,4 @@
-public class Table implements Element {
+public class Table extends Element {
     String title;
 
     public Table(String title) {
@@ -6,21 +6,22 @@ public class Table implements Element {
     }
 
     @Override
-    public void createNewParagraph(String para) {
-
-    }
-
-    @Override
-    public void createNewImage(String img) {
-
-    }
-
-    @Override
-    public void createNewTable(String table) {
-
-    }
-
     public void print() {
         System.out.println("Table with Title: " + this.title);
+    }
+
+    @Override
+    public void add(Element el) {
+
+    }
+
+    @Override
+    public void remove(Element el) {
+
+    }
+
+    @Override
+    public Element get(int num) {
+        return null;
     }
 }

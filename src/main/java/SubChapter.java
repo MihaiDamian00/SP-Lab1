@@ -1,31 +1,27 @@
 import java.util.LinkedList;
 import java.util.List;
 
-public class SubChapter implements Element {
+public class SubChapter extends Element {
     String name;
-
-    List<Element> elementList = new LinkedList<>();
 
     public SubChapter(String name) {
         this.name = name;
     }
 
-    public void createNewParagraph(String para)  {
-        this.elementList.add(new Paragraph(para));
+    @Override
+    public void add(Element el) {
     }
 
-    public void createNewImage(String img) {
-        this.elementList.add(new Image(img));
+    @Override
+    public void remove(Element el) {
     }
 
-    public void createNewTable(String table) {
-        this.elementList.add(new Table(table));
+    @Override
+    public Element get(int num) {
+        return null;
     }
 
     public void print() {
         System.out.println("Subchapter: " + this.name);
-        for (Element par : elementList) {
-            par.print();
-        }
     }
 }
