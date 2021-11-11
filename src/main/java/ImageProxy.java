@@ -1,4 +1,4 @@
-public class ImageProxy extends Element {
+public class ImageProxy extends Element implements Picture {
     private String imageName;
     private Image realImage;
 
@@ -34,5 +34,10 @@ public class ImageProxy extends Element {
     @Override
     Element get(int num) {
         return null;
+    }
+
+    @Override
+    public String url() {
+        return this.imageName;
     }
 }

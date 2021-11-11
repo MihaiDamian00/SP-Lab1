@@ -2,7 +2,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class Image extends Element {
+public class Image extends Element implements Picture {
     String imageName;
 
     public Image(String imageName) {
@@ -29,5 +29,10 @@ public class Image extends Element {
     @Override
     public Element get(int num) {
         return null;
+    }
+
+    @Override
+    public String url() {
+        return this.imageName;
     }
 }
