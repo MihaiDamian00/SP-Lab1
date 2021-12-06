@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.List;
 
-public class Section extends Element {
+public class Section extends Element implements Visitee{
     String title;
     List<Element> elementList = new LinkedList<>();
 
@@ -32,6 +32,14 @@ public class Section extends Element {
         System.out.println(this.title);
         for (Element el:elementList) {
             el.print();
+        }
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+        for (Element el:elementList) {
+            el.accept(visitor);
         }
     }
 }

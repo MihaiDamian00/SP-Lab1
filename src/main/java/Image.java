@@ -35,4 +35,9 @@ public class Image extends Element implements Picture {
     public String url() {
         return this.imageName;
     }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
 }

@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.List;
 
-public class Book extends Section{
+public class Book extends Section implements Visitee{
     String title;
     List<Author> authorList = new LinkedList<>();
     List<Element> elementList = new LinkedList<>();
@@ -32,6 +32,18 @@ public class Book extends Section{
 
         for (Element el : elementList) {
             el.print();
+        }
+    }
+
+    public List<Author> getAuthor(){
+        return this.authorList;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+        for (Element el: elementList) {
+            el.accept(visitor);
         }
     }
 }

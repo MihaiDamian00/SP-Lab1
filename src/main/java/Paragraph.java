@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.List;
 
-public class Paragraph extends Element {
+public class Paragraph extends Element implements Visitee {
     private String text;
     private AlignStrategy textAlignment;
 
@@ -41,5 +41,10 @@ public class Paragraph extends Element {
 
     public String getText() {
         return text;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
     }
 }

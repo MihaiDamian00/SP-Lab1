@@ -1,4 +1,4 @@
-public class TableOfContents extends Element{
+public class TableOfContents extends Element implements Visitee {
     String title;
 
     public TableOfContents(String title) {
@@ -23,5 +23,10 @@ public class TableOfContents extends Element{
     @Override
     public Element get(int num) {
         return null;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
     }
 }
