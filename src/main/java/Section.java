@@ -35,6 +35,13 @@ public class Section extends Element implements Visitee{
         }
     }
 
+    public void render() {
+        System.out.println(this.title);
+        for (Element el:elementList) {
+            el.print();
+        }
+    }
+
     @Override
     public void accept(Visitor visitor) {
         visitor.visit(this);

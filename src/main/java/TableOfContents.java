@@ -10,6 +10,10 @@ public class TableOfContents extends Element implements Visitee {
         System.out.println("TableOfContents with title: " + this.title);
     }
 
+    public void render() {
+        System.out.println("TableOfContents with title: " + this.title);
+    }
+
     @Override
     public void add(Element el) {
 

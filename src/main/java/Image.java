@@ -18,6 +18,10 @@ public class Image extends Element implements Picture {
         System.out.println("Image with name: " + this.imageName);
     }
 
+    public void render() {
+        System.out.println("Image with name: " + this.imageName);
+    }
+
     @Override
     public void add(Element el) {
     }

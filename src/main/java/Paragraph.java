@@ -13,6 +13,10 @@ public class Paragraph extends Element implements Visitee {
         System.out.println("Paragraph: " + this.text);
     }
 
+    public void render() {
+        System.out.println("Paragraph: " + this.text);
+    }
+
     @Override
     public void add(Element el) {
     }

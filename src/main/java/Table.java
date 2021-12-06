@@ -10,6 +10,10 @@ public class Table extends Element implements Visitee {
         System.out.println("Table with Title: " + this.title);
     }
 
+    public void render() {
+        System.out.println("Table with Title: " + this.title);
+    }
+
     @Override
     public void add(Element el) {
 
