@@ -19,10 +19,15 @@ public class Main {
 
         myBook.addContent(cap1);
 
-        myBook.accept(new RenderContentVisitor());
+//        myBook.accept(new RenderContentVisitor());
 
         BookStatistics stats = new BookStatistics();
         cap1.accept(stats);
         stats.printStatistics();
+
+        GenerateToC toc = new GenerateToC();
+        myBook.accept(toc);
+        TableOfContents res = toc.getToc();
+        res.render();
     }
 }
