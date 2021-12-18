@@ -8,7 +8,6 @@ public class GenerateToC implements Visitor {
 
     @Override
     public void visit(Book book) {
-        toc.add(book);
     }
 
     @Override
@@ -23,7 +22,6 @@ public class GenerateToC implements Visitor {
 
     @Override
     public void visit(Paragraph paragraph) {
-        toc.add(paragraph);
     }
 
     @Override

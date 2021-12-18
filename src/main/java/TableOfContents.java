@@ -42,8 +42,5 @@ public class TableOfContents extends Element implements Visitee {
     @Override
     public void accept(Visitor visitor) {
         visitor.visit(this);
-        for (Element el:elementList) {
-            el.accept(visitor);
-        }
     }
 }
