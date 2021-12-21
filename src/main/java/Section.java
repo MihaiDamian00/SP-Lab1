@@ -49,4 +49,20 @@ public class Section extends Element implements Visitee{
             el.accept(visitor);
         }
     }
+
+    public void setElementList(List<Element> elementList) {
+        this.elementList = elementList;
+    }
+
+    public List<Element> getElementList() {
+        return elementList;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
 }

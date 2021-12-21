@@ -44,4 +44,8 @@ public class Image extends Element implements Picture {
     public void accept(Visitor visitor) {
         visitor.visit(this);
     }
+
+    public String getImageName() {
+        return imageName;
+    }
 }

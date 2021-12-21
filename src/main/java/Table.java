@@ -33,4 +33,8 @@ public class Table extends Element implements Visitee {
     public void accept(Visitor visitor) {
         visitor.visit(this);
     }
+
+    public String getTitle() {
+        return title;
+    }
 }

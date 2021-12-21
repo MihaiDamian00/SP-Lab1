@@ -26,7 +26,7 @@ public class Main {
         stats.printStatistics();
 
         GenerateToC toc = new GenerateToC();
-        myBook.accept(toc);
+        cap1.accept(toc);
         TableOfContents res = toc.getToc();
         res.render();
     }
