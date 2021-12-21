@@ -1,10 +1,11 @@
-public class ImageProxy extends Element implements Picture {
+import java.awt.*;
+
+public class ImageProxy extends Element implements Picture, Visitee {
     private String imageName;
     private Image realImage;
 
     public ImageProxy(String url) {
         this.imageName = url;
-        this.realImage = null;
     }
 
     public Image loadImage() {
@@ -17,6 +18,11 @@ public class ImageProxy extends Element implements Picture {
 
     @Override
     void print() {
+        loadImage();
+        realImage.print();
+    }
+
+    void render() {
         loadImage();
         realImage.print();
     }
@@ -39,5 +45,15 @@ public class ImageProxy extends Element implements Picture {
     @Override
     public String url() {
         return this.imageName;
+    }
+
+    @Override
+    public PictureContent content() {
+        return null;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
     }
 }

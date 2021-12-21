@@ -1,4 +1,4 @@
-public class Table extends Element {
+public class Table extends Element implements Visitee {
     String title;
 
     public Table(String title) {
@@ -7,6 +7,10 @@ public class Table extends Element {
 
     @Override
     public void print() {
+        System.out.println("Table with Title: " + this.title);
+    }
+
+    public void render() {
         System.out.println("Table with Title: " + this.title);
     }
 
@@ -23,5 +27,14 @@ public class Table extends Element {
     @Override
     public Element get(int num) {
         return null;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
+
+    public String getTitle() {
+        return title;
     }
 }

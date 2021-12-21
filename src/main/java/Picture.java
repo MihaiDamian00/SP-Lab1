@@ -5,7 +5,5 @@ import java.awt.*;
 // have to remove Element as superclass for Image and ImageProxy
 public interface Picture {
     String url();
-//    will be implemented later, needs additional classes
-//    Dimension dim();
-//    PictureContent content();
+    PictureContent content();
 }
