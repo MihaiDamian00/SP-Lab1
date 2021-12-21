@@ -1,10 +1,11 @@
+import java.awt.*;
+
 public class ImageProxy extends Element implements Picture, Visitee {
     private String imageName;
     private Image realImage;
 
     public ImageProxy(String url) {
         this.imageName = url;
-        this.realImage = null;
     }
 
     public Image loadImage() {
@@ -44,6 +45,11 @@ public class ImageProxy extends Element implements Picture, Visitee {
     @Override
     public String url() {
         return this.imageName;
+    }
+
+    @Override
+    public PictureContent content() {
+        return null;
     }
 
     @Override

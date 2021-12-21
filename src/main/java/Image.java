@@ -1,3 +1,5 @@
+import java.awt.*;
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -20,6 +22,7 @@ public class Image extends Element implements Picture {
 
     public void render() {
         System.out.println("Image with name: " + this.imageName);
+        content().renderImage();
     }
 
     @Override
@@ -38,6 +41,11 @@ public class Image extends Element implements Picture {
     @Override
     public String url() {
         return this.imageName;
+    }
+
+    @Override
+    public PictureContent content() {
+        return new PictureContent(this.imageName);
     }
 
     @Override

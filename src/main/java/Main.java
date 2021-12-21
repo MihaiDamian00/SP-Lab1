@@ -12,14 +12,14 @@ public class Main {
         cap1.add(p3);
         Paragraph p4 = new Paragraph("Paragraph 4");
         cap1.add(p4);
-        cap1.add(new ImageProxy("ImageOne"));
-        cap1.add(new Image("ImageTwo"));
+        cap1.add(new ImageProxy(".\\images\\WIN_20200331_16_46_23_Pro.jpg"));
+        cap1.add(new Image(".\\images\\WIN_20200331_16_46_23_Pro.jpg"));
         cap1.add(new Paragraph("Some text"));
         cap1.add(new Table("Table 1"));
 
         myBook.addContent(cap1);
 
-//        myBook.accept(new RenderContentVisitor());
+        cap1.accept(new RenderContentVisitor());
 
         BookStatistics stats = new BookStatistics();
         cap1.accept(stats);
