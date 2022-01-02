@@ -19,3 +19,10 @@ all good
 https://github.com/MihaiDamian00/SP-Lab1/commit/41f88c48d36344b1f17765fd7994e04795d0aeb7
 
 all good
+
+# Feedback lab6:
+https://github.com/MihaiDamian00/SP-Lab1/tree/761f03dc46472c2f2c90f7d582774523442a633d
+
+Table of content should contain a list of strings that represents section's titles. 
+
+# Proposed grade: 10
