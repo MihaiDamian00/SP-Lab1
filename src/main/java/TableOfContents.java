@@ -4,6 +4,7 @@ import java.util.List;
 public class TableOfContents extends Element implements Visitee {
     String title;
     List<Element> elementList = new LinkedList<>();
+    List<String> content = new LinkedList<>();
 
     public TableOfContents(String title) {
         this.title = title;
@@ -14,10 +15,13 @@ public class TableOfContents extends Element implements Visitee {
         System.out.println("TableOfContents with title: " + this.title);
     }
 
+    public void addEntry(String e){
+        this.content.add(e);
+    }
     public void render() {
         System.out.println("TableOfContents with title: " + this.title);
-        for (Element el:elementList) {
-            el.print();
+        for (Element e:content) {
+            System.out.println(e);
         }
     }
 
