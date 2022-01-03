@@ -13,11 +13,8 @@ public class GenerateToC implements Visitor {
 
     @Override
     public void visit(Section section) {
-        number ++;
-        secondNumber = 0;
-        Section section1 = new Section(section.getTitle() + "................" + number);
-
-        toc.add(section1);
+        
+        toc.addEntry(section.getTitle()+ "......"+secondNumber);
     }
 
     @Override
@@ -28,32 +25,24 @@ public class GenerateToC implements Visitor {
     @Override
     public void visit(Paragraph paragraph) {
         secondNumber ++;
-        Paragraph paragraph1 = new Paragraph(paragraph.getText() +"................" + number+"."+secondNumber);
-
-        toc.add(paragraph1);
+      
     }
 
     @Override
     public void visit(ImageProxy imageProxy) {
         secondNumber ++;
-        ImageProxy imageProxy1 = new ImageProxy(imageProxy.url() + "................"+ number+"."+secondNumber);
-
-        toc.add(imageProxy1);
+        
     }
 
     @Override
     public void visit(Table table) {
         secondNumber ++;
-        Table table1 = new Table(table.getTitle() + "................"+ number+"."+secondNumber);
-
-        toc.add(table1);
+        
     }
 
     @Override
     public void visit(Image image) {
         secondNumber ++;
-        Image image1 = new Image(image.getImageName() + "................"+ number+"."+secondNumber);
-
-        toc.add(image1);
+        
     }
 }
